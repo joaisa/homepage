@@ -6,19 +6,22 @@
     --text-font: 'Roboto', 'Arial';
     --text-size: 1.2rem;
 
-    --color1: #222;
-    --color2: #262626;
-    --color3: #2c2c2c;
-    --color4: #343434;
-    --color5: #3c3c3c;
-    --color6: #484848;
-    --color7: #565656;
-    --color8: #666;
-    --color9: #6a6a6a;
-    --color10: #777;
-    --color11: #888;
-    --color12: #969696;
-    --color13: #9f9f9f;
+    --color1: #161616;
+    --color2: #191919;
+    --color3: #1b1b1b;
+    --color4: #222;
+    --color5: #262626;
+    --color6: #2c2c2c;
+    --color7: #343434;
+    --color8: #3c3c3c;
+    --color9: #484848;
+    --color10: #565656;
+    --color11: #666;
+    --color12: #6a6a6a;
+    --color13: #777;
+    --color14: #888;
+    --color15: #969696;
+    --color16: #9f9f9f;
 
     --transition1: all 0.5s ease-out;
 
@@ -32,7 +35,7 @@
 
 html, body {
 
-    background-color: var(--color1);
+    background-color: var(--color3);
 
     color: var(--text-color);
     font-family: var(--text-font);
@@ -67,6 +70,8 @@ html, body {
 .text-align-center {text-align: center;}
 .text-align-left {text-align: left;}
 
+.display-none {display: none;}
+
 .center-80 {
   width: 80%;
   margin-left: 10%;
@@ -97,6 +102,12 @@ html, body {
   margin-bottom: 0.5rem;
 }
 
+.embed {
+  background-color: var(--color2);
+  border: 0.5rem solid var(--color2);
+  border-radius: 0.5rem;
+}
+
 .no-select {
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -117,6 +128,9 @@ html, body {
 .background-11 {background-color: var(--color11);}
 .background-12 {background-color: var(--color12);}
 .background-13 {background-color: var(--color13);}
+.background-14 {background-color: var(--color14);}
+.background-15 {background-color: var(--color15);}
+.background-16 {background-color: var(--color16);}
 
 .rounded-corner-1 {border-radius: 0.2rem;}
 .rounded-corner-2 {border-radius: 0.3rem;}
@@ -134,12 +148,12 @@ html, body {
   
   /* Track */
   ::-webkit-scrollbar-track {
-    background: var(--color4); 
+    background: var(--color2); 
   }
    
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: var(--color6);
+    background: var(--color4);
     transition: all 0.1s ease;
 
     border-radius: 0.25rem;
@@ -147,5 +161,5 @@ html, body {
   
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: var(--color7);
+    background: var(--color6);
   }

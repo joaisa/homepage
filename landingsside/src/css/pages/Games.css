@@ -5,9 +5,9 @@
 
     width: 40rem;
 
-    border-radius: 0.25rem;
+    border-radius: 0.5rem;
 
-    background-color: var(--color3);
+    background-color: var(--color2);
 }
 
 .game {
@@ -19,7 +19,7 @@
 
     border-radius: 0.5rem;
 
-    background-color: var(--color4);
+    background-color: var(--color3);
 
 
     text-align: center;
@@ -34,6 +34,7 @@
     margin-top: 5%;
     width: 50%;
     height: auto;
+    border-radius: 0.4rem;
 }
 
 .game-title {
@@ -52,14 +53,14 @@
 
     border-radius: 0.5rem;
 
-    background-color: var(--color5);
+    background-color: var(--color4);
 }
 
 .game:hover,
 .game:active {
     transform: translateY(-0.4rem);
     box-shadow: 0 14px 28px rgba(0, 0, 0, .15), 0 10px 10px rgba(0, 0, 0, .1);
-    background-color: var(--color6);
+    background-color: var(--color5);
 }
 
 /* Responsive grid */

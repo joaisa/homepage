@@ -1,6 +1,6 @@
 import React from 'react'
 
-import ShortenName from '../../lib/CustomFunctions'
+import { ShortenName } from '../../lib/CustomFunctions'
 
 // CSS
 import '../../css/pages/Projects.css'

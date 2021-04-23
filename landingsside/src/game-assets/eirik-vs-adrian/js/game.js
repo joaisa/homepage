@@ -3,7 +3,7 @@ import InputHandler from './inputhandler.js';
 import ObstacleGenerator from './obstaclegenerator.js';
 import CollisionDetector from './collisiondetector.js';
 
-//var music = null;
+var music = null
 
 export default class Game {
     constructor(gameWidth, gameHeight) {
@@ -23,7 +23,7 @@ export default class Game {
         this.score = 0;
         this.sessionHighscore = 0;
 
-        this.spawnChance = 8;
+        this.spawnChance = 20;
     }
 
     gameScreens(ctx) {
@@ -96,7 +96,7 @@ export default class Game {
                 sound.play();
             })
 
-            //music.play();
+            music.play();
         }
 
         else {
@@ -106,11 +106,13 @@ export default class Game {
                 sound.pause();
             })
 
-            //music.stop();
+            music.pause();
         }
     }
 
     start() {
+        music = document.getElementById('game-assets/wav/music');
+        
         this.gamestate = 'PAUSED';
         
         document.addEventListener('keydown', (input) => {
@@ -138,11 +140,11 @@ export default class Game {
 
         this.score = 0;
 
-        //music.play();
+        music.play();
     }
 
     update(deltaTime) {
-        // if (this.gamestate === 'GAMEOVER') music.stop();
+        if (this.gamestate === 'GAMEOVER') music.pause();
         if (!deltaTime || this.gamestate === 'PAUSED' || this.gamestate === 'GAMEOVER') return;
 
         this.score += 0.001 * deltaTime;

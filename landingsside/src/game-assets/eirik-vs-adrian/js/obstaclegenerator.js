@@ -1,9 +1,49 @@
-var speed = 0.5;
+var speed = 0.2;
 
-var minSpeed = 0.05;
+var minSpeed = 0.5;
 
 var width = 80;
 var height = 80;
+
+function randomSpeedMain() {
+    return (Math.random() * speed + minSpeed) * ((window.screen.width + window.screen.height) / (10000 / 4));
+}
+
+function randomSpeedSub() {
+    return ((Math.random() * speed) - speed / 2) * 4;
+}
+
+
+
+function calculateObstacleSpeed(direction) {
+    if(direction === 'left') {
+        return {
+            x: randomSpeedMain(),
+            y: randomSpeedSub()
+        }
+    }
+
+    else if(direction === 'right') {
+        return {
+            x: -randomSpeedMain(),
+            y: randomSpeedSub()
+        }
+    }
+
+    else if(direction === 'top') {
+        return {
+            x: randomSpeedSub(),
+            y: randomSpeedMain()
+        }
+    }
+
+    else {
+        return {
+            x: randomSpeedSub(),
+            y: -randomSpeedMain()
+        }
+    }
+}
 
 export default class ObstacleGenerator {
     constructor(game) {
@@ -19,7 +59,8 @@ export default class ObstacleGenerator {
     }
 
     newObstacle() {
-        var snd = new Audio('./assets/mp3/enemy-spawn.mp3');
+        var snd = document.getElementById('game-assets/mp3/enemy-spawn').cloneNode(true);
+        snd.addEventListener('ended', () => snd.remove())
         snd.volume = 0.1;
         snd.play();
         this.sounds.push(snd);
@@ -30,10 +71,7 @@ export default class ObstacleGenerator {
                 width: width,
                 height: height,
                 from: 'left',
-                speed: {
-                    x: Math.floor((Math.random() * speed) + 0.5 + minSpeed),
-                    y: Math.floor((Math.random() * speed / 1.2) + 0.5) - speed / 2
-                },
+                speed: calculateObstacleSpeed('left'),
                 position: {
                     x: -width,
                     y: Math.floor((Math.random() * this.game.gameHeight) + 0.5)
@@ -46,10 +84,7 @@ export default class ObstacleGenerator {
                 width: width,
                 height: height,
                 from: 'right',
-                speed: {
-                    x: -Math.floor((Math.random() * speed) + 0.5 + minSpeed),
-                    y: Math.floor((Math.random() * speed / 1.2) + 0.5) - speed / 2
-                },
+                speed: calculateObstacleSpeed('right'),
                 position: {
                     x: this.game.gameWidth,
                     y: Math.floor((Math.random() * this.game.gameHeight) + 0.5)
@@ -62,10 +97,7 @@ export default class ObstacleGenerator {
                 width: width,
                 height: height,
                 from: 'top',
-                speed: {
-                    x: Math.floor((Math.random() * speed / 1.2) + 0.5) - speed / 2,
-                    y: Math.floor((Math.random() * speed) + 0.5 + minSpeed)
-                },
+                speed: calculateObstacleSpeed('top'),
                 position: {
                     x: Math.floor((Math.random() * this.game.gameWidth) + 0.5),
                     y: -height
@@ -78,10 +110,7 @@ export default class ObstacleGenerator {
                 width: width,
                 height: height,
                 from: 'bottom',
-                speed: {
-                    x: -Math.floor((Math.random() * speed / 1.2) + 0.5) - speed / 2,
-                    y: -Math.floor((Math.random() * speed) + 0.5 + minSpeed)
-                },
+                speed: calculateObstacleSpeed('bottom'),
                 position: {
                     x: Math.floor((Math.random() * this.game.gameWidth) + 0.5),
                     y: this.game.gameHeight

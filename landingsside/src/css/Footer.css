@@ -2,7 +2,7 @@
     width: 100%;
     height: var(--footer-height);
 
-    background-color: var(--color3);
+    background-color: var(--color4);
 
     z-index: 3;
 }
@@ -83,6 +83,10 @@
 
     font-size: 28px;
     list-style: none;
+}
+
+.footer .pages li {
+    margin-bottom: 0.15rem;
 }
 
 /* Responsive grid */

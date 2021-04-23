@@ -24,7 +24,7 @@ export default function EirikVsAdrian() {
             <audio id="game-assets/mp3/player-swoosh" src={PlayerSwoosh} />
             <audio id="game-assets/mp3/enemy-spawn" src={EnemySpawn} />
 
-            <audio id="game-assets/wav/music" src={Music} />
+            <audio id="game-assets/wav/music" src={Music} loop />
         </div>
     </>
 }

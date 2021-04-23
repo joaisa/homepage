@@ -40,7 +40,9 @@ export default function Footer() {
 
             <div className="pages">
                 <li><a href="/home">Home</a></li>
-                <li><a href="/nonexistingpage">Non Existing Page</a></li>
+                <li><a href="/about">About Me</a></li>
+                <li><a href="/projects">My Projects</a></li>
+                <li><a href="/games">My Games</a></li>
             </div>
         </div>
     </div>

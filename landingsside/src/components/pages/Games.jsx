@@ -1,6 +1,6 @@
 import React from 'react'
 
-import ShortenName from '../../lib/CustomFunctions'
+import { ShortenName } from '../../lib/CustomFunctions'
 
 export default function Game(properties) {
     return <a className="game" href={properties.href} title={properties.name}>

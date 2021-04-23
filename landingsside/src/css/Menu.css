@@ -1,26 +1,26 @@
 .menu {
-    height: calc(100vh - var(--header-height));
+    height: 100vh;
 
     position: fixed;
 
-    top: var(--header-height);
+    top: 0;
     left: 0;
 
     overflow-x: hidden;
-    background-color: var(--color2);
+    background-color: var(--color1);
+    color: var(--text-color);
 
-    transition: width 0.5s ease-out, background-color 0.5s ease;
+    transition: width 0.5s ease-out, background-color 0.5s ease, top 0.5s ease, top 0s;
 
-    z-index: 2;
+    z-index: 5;
 }
 
 .menu-closed {
     width: 0;
-    background-color: transparent;
 }
 
 .menu-open {
-    width: 300px;
+    width: 350px;
 }
 
 .menu .top {
@@ -28,10 +28,11 @@
 
     grid-template-columns: 2fr 1fr;
 
-    background-color: var(--color3);
+    background-color: var(--color1);
+    color: #bbb;
     height: 5rem;
 
-    transition: var(--transition1);
+    transition: var(--transition1), height 0s;
 
     overflow: hidden;
 }
@@ -40,7 +41,7 @@
     font-size: 2.5rem;
 
     margin: 0;
-    margin-top: 0.75rem;
+    margin-top: 1rem;
     margin-left: 1rem;
 }
 
@@ -48,9 +49,10 @@
     text-align: center;
 
     height: 0;
-    margin-top: -1px;
+    margin-top: -2px;
 
     font-size: 4rem;
+    font-weight: 300;
 
     cursor: pointer;
 
@@ -59,9 +61,9 @@
 
 .menu .top .close-button:hover,
 .menu .top .close-button:active {
-    color: #bbb;
-    transform: scale(1.1) translateY(-0.25rem);
-    text-shadow: 0px 3px rgba(0, 0, 0, 1);
+    color: var(--text-color);
+    transform: scale(1.1) translateY(-0.3rem);
+    text-shadow: 0px 4px black;
 }
 
 .menu-buttons {
@@ -71,7 +73,7 @@
 
     width: 100%;
 
-    margin: 1rem 0 1rem 0; /* TRBL */
+    margin: -0.5rem 0 1rem 0; /* TRBL */
 
     transition: var(--transition1);
 }
@@ -80,13 +82,15 @@
     
     width: 80%;
 
-    margin: 0 0 0.5rem 0;
-    padding: 1rem 0 1rem 1rem;
+    margin: 0 0 0.25rem 0;
+    padding: 1.4rem 0 1.4rem 1rem;
 
-    background-color: var(--color3);
+    background-color: var(--color2);
     white-space: nowrap;
 
-    font-size: 1.5rem;
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #aaa;
 
     transition: all 0.3s ease;
 
@@ -97,16 +101,66 @@
     user-select: none;
 }
 
+.menu-cover {
+    width: 100%;
+    height: 100vh;
+    z-index: 3;
+
+    position: fixed;
+    bottom: 0;
+    left: 0;
+
+    background-color: rgba(0,0,0,.3);
+
+    transition: all 0.5s ease-out, height 0s, width 0s;
+}
+
+.menu-cover-closed {
+    background-color: transparent;
+    z-index: -1;
+}
+
+.menu-category {
+    padding: 0 1rem 0 1rem;
+    font-weight: 800;
+
+    color: #bbb;
+
+    background-color: var(--color3);
+}
+
 @media screen and (min-width: 801px) {
     .menu-buttons div:hover,
     .menu-buttons div:active {
         width: 90%;
-        background-color: var(--color4);
+        background-color: var(--color3);
+        color: white;
         box-shadow: 0 14px 28px rgba(0, 0, 0, .15), 0 10px 10px rgba(0, 0, 0, .1);
+    }
+
+    .menu-category {
+        border-radius: 0.5rem;
+        width: 70%;
+        margin: 0.7rem 0 0.7rem 0.4rem;
     }
 }
 
 @media screen and (max-width: 800px) {
+    .menu-cover {display: none;}
+
+    .menu-category {
+        text-align: center;
+        font-size: 50px;
+
+        border-top: 0.5rem solid var(--color2);
+        border-bottom: 0.5rem solid var(--color2);
+    }
+
+    .menu {
+        height: calc(100vh - var(--header-height));
+        top: var(--header-height);
+    }
+
     .menu-open {
         width: 100%;
     }
@@ -125,6 +179,7 @@
         width: 100%;
         font-size: 3rem;
         padding: 1rem 0 1rem 0;
+        white-space: normal;
     }
 
     .menu-buttons div:hover,

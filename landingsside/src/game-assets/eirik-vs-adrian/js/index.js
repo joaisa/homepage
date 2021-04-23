@@ -21,8 +21,8 @@ document.addEventListener('DOMContentLoaded', () => {
     let footer = document.querySelector('.footer')
     if(footer) footer.remove();
 
-    canvas.width = window.screen.availWidth / 1.4;
-    canvas.height = window.screen.availHeight / 1.4;
+    canvas.width = window.screen.width / 1.4;
+    canvas.height = window.screen.height / 1.4;
 
     ctx = canvas.getContext('2d');
     
@@ -34,6 +34,9 @@ document.addEventListener('DOMContentLoaded', () => {
     
     lastTime = 0;
     
+    let fullscreenButton = document.getElementById('fullscreen-button')
+    if(fullscreenButton) fullscreenButton.addEventListener('click', () => canvas.requestFullscreen())
+
     game.start();
     requestAnimationFrame(gameLoop);
 })

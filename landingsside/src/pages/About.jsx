@@ -32,7 +32,7 @@ export default function About() {
                 </h4>
             </div>
 
-            <center><iframe className="margin-top margin-bottom" width="57.5%" height="500rem" src="https://www.youtube.com/embed/ElKzExQDidg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+            <center><iframe className="embed margin-top margin-bottom rounded-corner-2" width="60%" height="700vh" src="https://www.youtube.com/embed/ElKzExQDidg" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen controls></iframe></center>
 
             <div className="paragraph background-2 rounded-corner-3">
                 <h2>My skills</h2>

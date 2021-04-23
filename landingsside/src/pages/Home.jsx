@@ -16,6 +16,10 @@ export default function home() {
                 some of my personal information, my projects
                 and my games.
             </h3>
+
+            <h2>YouTube Feed:</h2>
         </div>
+
+        <center><iframe className="embed" title="Social Feed" src="https://widget.taggbox.com/first-widget-68000" width="60%" height="500vh" frameBorder="0" allowFullScreen></iframe></center>
     </>
 }

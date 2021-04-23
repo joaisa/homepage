@@ -20,16 +20,17 @@ export default function Games() {
         <div className="text-align-center">
             <h2>My Games</h2>
 
-            <h3>
+            <h3 class="paragraph background-2 rounded-corner-3">
                 Here are all the web games that
                 I have uploaded to this domain:
             </h3>
         </div>
 
-        <center><div className="game-grid">
+        <center><div className="game-grid no-select">
             <Game name="Eirik Vs Adrian" category="Arcade" img={eirikVsAdrian} href="/games/play/eirik-vs-adrian" />
-            <Game name="Eirik Vs Adrian" category="Arcade" img={eirikVsAdrian} href="/games/play/eirik-vs-adrian" />
-            <Game name="Eirik Vs Adrian" category="Arcade" img={eirikVsAdrian} href="/games/play/eirik-vs-adrian" />
+            <Game name="Not a game" category="Placeholder" img={eirikVsAdrian} href="/games/play/placeholder" />
+            <Game name="Not a game" category="Placeholder" img={eirikVsAdrian} href="/games/play/placeholder" />
+            <Game name="Not a game" category="Placeholder" img={eirikVsAdrian} href="/games/play/placeholder" />
         </div></center>
     </>
 }

@@ -8,8 +8,8 @@ export default class Player {
         this.position = {x:this.game.gameWidth / 2 - this.width / 2, y:this.game.gameHeight / 2 - this.height / 2};
 
         this.speed = {
-            x: 100,
-            y: 100
+            x: 115,
+            y: 115
         }
 
         this.velocity = {
@@ -17,8 +17,8 @@ export default class Player {
             y: 0
         }
 
-        this.gameOverSound = new Audio('./assets/mp3/eirik_au.mp3');
-        this.swooshSound = new Audio('./assets/mp3/eirik_swoosh.mp3')
+        this.gameOverSound = document.getElementById('game-assets/mp3/player-hurt')
+        this.swooshSound = document.getElementById('game-assets/mp3/player-swoosh')
 
         this.swooshDebounce = false;
 

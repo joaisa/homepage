@@ -5,9 +5,9 @@ import { Helmet } from 'react-helmet'
 import Project from '../components/pages/Projects'
 
 // Media
-import kh from '../media/img/projects/kh.jpg'
-import podcastMedievaner from '../media/img/projects/podcast-medievaner.jpg'
-import digitalKampanje from '../media/img/projects/digital-kampanje.jpg'
+import KH from '../media/img/projects/kh.jpg'
+import PodkastMedievaner from '../media/img/projects/podkast-medievaner.jpg'
+import DigitalKampanje from '../media/img/projects/digital-kampanje.jpg'
 
 export default function Projects() {
     return <>
@@ -24,10 +24,10 @@ export default function Projects() {
             </h3>
         </div>
 
-        <center><div class="project-grid">
-            <Project name="Knutstad & Holen" category="Web" href="/projects/something" img={kh} />
-            <Project name="Podkast om medievaner" category="Lyd & Film" href="/projects/something" img={podcastMedievaner} />
-            <Project name="Digital kampanje" category="Web" href="/projects/something" img={digitalKampanje} />
+        <center><div className="project-grid no-select">
+            <Project name="Knutstad & Holen" category="Web" href="/projects/kh" img={KH} />
+            <Project name="Podkast om medievaner" category="Lyd & Film" href="/projects/podkast-medievaner" img={PodkastMedievaner} />
+            <Project name="Digital kampanje" category="Web" href="/projects/digital-kampanje" img={DigitalKampanje} />
         </div></center>
     </>
 }
