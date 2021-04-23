@@ -1,0 +1,126 @@
+.footer {
+    width: 100%;
+    height: var(--footer-height);
+
+    background-color: var(--color3);
+
+    z-index: 3;
+}
+
+.footer-grid {
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr 0.6fr 1fr;
+}
+
+.footer-grid li,
+.footer-grid a {
+    width: 100%;
+
+    margin-left: 1rem;
+}
+
+.footer-grid a {
+    text-decoration: underline white;
+    color: var(--text-color);
+}
+
+.footer .contact-me {
+    height: var(--footer-height);
+
+    display: grid;
+
+    grid-template-columns: 1fr;
+    font-size: 26px;
+
+    margin-top: 1rem;
+
+    white-space: nowrap;
+}
+
+.footer .contact-me li {
+    margin-left: 1rem;
+}
+
+.footer .contact-me li a {
+    margin-left: 2%;
+}
+
+.footer .social-links {
+    width: 100%;
+    height: var(--footer-height);
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    list-style: none;
+}
+
+.footer .social-links li {
+    width: 100%;
+    margin: 0;
+    margin-top: 3.8rem;
+}
+
+.footer .social-links li a {margin: 0;}
+
+.footer .social-links li a img {
+    width: 100%;
+    margin: 0;
+}
+
+.footer .social-links .youtube {position: relative; top: 4.5%;}
+.footer .social-links .discord {position: relative; bottom: 0.5%;}
+.footer .social-links .soundcloud {position: relative; bottom: 3%;}
+
+.footer .pages {
+    width: 100%;
+    height: 100%;
+
+    margin-top: 1rem;
+
+    font-size: 28px;
+    list-style: none;
+}
+
+/* Responsive grid */
+
+@media screen and (max-width: 850px) {
+    .footer .contact-me,
+    .footer .pages {
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .footer {
+        height: calc(var(--footer-height) * 1.8);
+    }
+
+    .footer-grid {
+        height: 100%;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+
+    .footer .contact-me {
+        text-align: center;
+    }
+
+    .footer .contact-me li {
+        margin-left: 0;
+    }
+
+    .footer .social-links {
+        width: 70%;
+        margin-left: 15%;
+    }
+
+    .footer .social-links li {
+        margin: 0;
+    }
+
+    .pages {display: none;}
+}

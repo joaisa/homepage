@@ -1,0 +1,6 @@
+#game-window {
+    border: 5px solid var(--color4);
+    background-image: radial-gradient(var(--color3), black);
+}
+
+#game-assets {display: none;}

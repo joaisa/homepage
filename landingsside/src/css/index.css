@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+
+    --text-color: #eee;
+    --text-font: 'Roboto', 'Arial';
+    --text-size: 1.2rem;
+
+    --color1: #222;
+    --color2: #262626;
+    --color3: #2c2c2c;
+    --color4: #343434;
+    --color5: #3c3c3c;
+    --color6: #484848;
+    --color7: #565656;
+    --color8: #666;
+    --color9: #6a6a6a;
+    --color10: #777;
+    --color11: #888;
+    --color12: #969696;
+    --color13: #9f9f9f;
+
+    --transition1: all 0.5s ease-out;
+
+    --header-height: 5rem;
+    --footer-height: 12rem;
+
+    --content-margin-top: 1rem;
+    --content-margin-bottom: 1rem;
+    --content-margin-sides: 1rem;
+}
+
+html, body {
+
+    background-color: var(--color1);
+
+    color: var(--text-color);
+    font-family: var(--text-font);
+    font-size: var(--text-size);
+
+    margin: 0;
+    padding: 0;
+
+    overflow-x: hidden;
+}
+
+#main {
+    width: 100%;
+
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.content {
+    width: calc(100% - var(--content-margin-sides) * 2);
+    margin-left: var(--content-margin-sides);
+
+    min-height: calc(100vh - var(--header-height) - var(--footer-height) - var(--content-margin-top) - var(--content-margin-bottom));
+
+    margin-top: calc(var(--header-height) + var(--content-margin-top));
+    margin-bottom: var(--content-margin-bottom);
+}
+
+.content h2 {font-weight: 500;}
+.content h3 {font-weight: 400;}
+
+.text-align-center {text-align: center;}
+.text-align-left {text-align: left;}
+
+.center-80 {
+  width: 80%;
+  margin-left: 10%;
+}
+
+.margin-top {margin-top: 1.5rem;}
+.margin-bottom {margin-bottom: 1.5rem;}
+
+.link {color: #88f;}
+
+.paragraph {
+    width: 70%;
+    margin-left: 15%;
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+}
+
+.paragraph h4 {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.paragraph h5 {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.paragraph li {
+  margin-bottom: 0.5rem;
+}
+
+.no-select {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.background-1 {background-color: var(--color1);}
+.background-2 {background-color: var(--color2);}
+.background-3 {background-color: var(--color3);}
+.background-4 {background-color: var(--color4);}
+.background-5 {background-color: var(--color5);}
+.background-6 {background-color: var(--color6);}
+.background-7 {background-color: var(--color7);}
+.background-8 {background-color: var(--color8);}
+.background-9 {background-color: var(--color9);}
+.background-10 {background-color: var(--color10);}
+.background-11 {background-color: var(--color11);}
+.background-12 {background-color: var(--color12);}
+.background-13 {background-color: var(--color13);}
+
+.rounded-corner-1 {border-radius: 0.2rem;}
+.rounded-corner-2 {border-radius: 0.3rem;}
+.rounded-corner-3 {border-radius: 0.5rem;}
+.rounded-corner-4 {border-radius: 1rem;}
+
+
+
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 15px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: var(--color4); 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--color6);
+    transition: all 0.1s ease;
+
+    border-radius: 0.25rem;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color7);
+  }
