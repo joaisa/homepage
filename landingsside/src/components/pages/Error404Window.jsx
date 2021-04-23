@@ -1,7 +1,6 @@
 import React from 'react'
 
 import '../../js/Error404Window.js'
-import '../../css/DisableFooter.css'
 
 // Images
 import CharIdle from '../../media/img/pages/error-404/char_idle.png'
