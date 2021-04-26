@@ -25,7 +25,7 @@ export default function Projects() {
         </div>
 
         <center><div className="project-grid no-select">
-            <Project name="Knutstad & Holen" category="Web" href="/projects/kh" img={KH} />
+            <Project name="Knutstad & Holen" category="Web" href="/projects/KH/Home" img={KH} />
             <Project name="Podkast om medievaner" category="Lyd & Film" href="/projects/podkast-medievaner" img={PodkastMedievaner} />
             <Project name="Digital kampanje" category="Web" href="/projects/digital-kampanje" img={DigitalKampanje} />
         </div></center>

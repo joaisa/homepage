@@ -41,7 +41,7 @@ var runningFrame = 1;
 var increment = 0.1;
 function runningAnimation(direction) {
 
-    increment = ((char.velocity.x > 0)?char.velocity.x:-char.velocity.x) * deltaTime / 100;
+    increment = ((char.velocity.x > 0)?char.velocity.x:-char.velocity.x) * deltaTime / 50;
     runningFrame += increment;
     if(Math.floor(runningFrame) > 2) runningFrame = 1;
     return `char_${direction}_${Math.floor(runningFrame)}`;
